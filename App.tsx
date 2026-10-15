@@ -6,7 +6,7 @@
  */
 
 import { NewAppScreen } from '@react-native/new-app-screen';
-import { Image, StatusBar, StyleSheet, useColorScheme, View,} from 'react-native';
+import { StatusBar, StyleSheet, useColorScheme, View,ScrollView } from 'react-native';
 import {
   SafeAreaProvider,
   useSafeAreaInsets,
@@ -28,16 +28,15 @@ function AppContent() {
   const safeAreaInsets = useSafeAreaInsets();
 
   return (
-    <View
-  style={[
-    style.container,
-    { paddingTop: safeAreaInsets.top },
-  ]}
->
-  
-  <LoginScreen/>
-  {/* <FlatListExample /> */}
-</View>
+    <ScrollView
+      contentContainerStyle={[
+        style.container,
+        { paddingTop: safeAreaInsets.top },
+      ]}
+    >
+
+      <LoginScreen />
+    </ScrollView>
   );
 }
 

@@ -24,15 +24,19 @@ const LoginScreen = () => {
                 fontWeight:'normal'
             }} ><ArrowLeft style={{ color: 'white' }} /></TouchableOpacity>
 
-            <Text style={styles.heading}>Go ahead and set up {"\n"} your account</Text>
+
+<View style={{paddingVertical:20}}>
+  <Text style={styles.heading}>Go ahead and set up {"\n"} your account</Text>
             <Text style={{
                 color: '#8994A7', marginTop: 5, marginHorizontal: 20, marginTop: 5,
                 marginBottom: 30
             }}>Sign in-up to enjoy the st managing experience</Text>
+</View>
+          
 
             {/* White panel with login details  */}
             <View style={styles.whitePanel}>
-                <Button title='Login'></Button>
+                {/* <Button title='Login'></Button> */}
 
                 <View style={styles.inputContainer}>
                     < Mail style={{ color: 'lightblue' }} />
@@ -126,8 +130,7 @@ export default LoginScreen
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        padding: 1,
-        paddingTop: 30
+
     },
     ArrowLeft: {
         paddingVertical: 40,
